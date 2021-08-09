@@ -1,23 +1,26 @@
 <template>
   <div class="app-tool">
-    <h1>Format Json</h1>
-    <textarea v-model="textJson"></textarea>
-    <button v-on:click="formatJson">Format</button>
+    <h1>Crypto Md5</h1>
+    <textarea v-model="textData"></textarea>
+    <textarea v-model="textData2"></textarea>
+    <button v-on:click="doMake">Crypto</button>
     <router-link :to="{ name: 'Home' }">Back to home</router-link>
   </div>
 </template>
 
 <script>
+import CryptoJS from "crypto-js";
 export default {
-  name: "FormatJson",
+  name: "CryptoMd5",
   data() {
     return {
-      textJson: null,
+      textData: null,
+      textData2: null,
     };
   },
   methods: {
-    formatJson() {
-        this.textJson= JSON.stringify(JSON.parse(this.textJson), null, 4);
+    doMake() {
+      this.textData2 = CryptoJS.MD5(this.textData);
     },
   },
   props: {},
@@ -26,7 +29,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-textarea {
-  height: 500px;
-}
 </style>
