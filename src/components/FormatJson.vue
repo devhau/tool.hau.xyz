@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     formatJson() {
-        this.textJson= JSON.stringify(JSON.parse(this.textJson), null, "\t");
+        this.textJson= JSON.stringify(JSON.parse(this.textJson), null, 4);
     },
   },
   props: {},
