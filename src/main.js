@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import routes from './route/index'
 import VueRouter from 'vue-router'
-import '@fortawesome/fontawesome-free'
+import '@fortawesome/fontawesome-free/css/all.css'
 import App from './App'
 import './app.css'
 
